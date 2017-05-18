@@ -1,5 +1,10 @@
 'use strict';
+let counter =0;
+let some = setInterval(function(){
+console.log(`Called ${++counter}times`);
 
-setInterval(function(){
-  console.log('Hello with delay :)');
-}, 3000)
+if (counter===7){
+
+  clearInterval(some);
+}
+}, 300)
